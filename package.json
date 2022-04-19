@@ -1,0 +1,27 @@
+{
+  "name": "surveyor",
+  "version": "1.0.0",
+  "author": "mkalvas",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkalvas/surveyor.git"
+  },
+  "license": "MIT",
+  "description": "A dependency analysis and visualization tool for projects using ES6 imports and exports.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "dependencies",
+    "javascript",
+    "typescript",
+    "architecture",
+    "neo4j",
+    "graph"
+  ],
+  "dependencies": {
+    "cli-progress": "^3.10.0",
+    "neo4j-driver": "^4.4.5"
+  }
+}
