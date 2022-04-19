@@ -84,7 +84,10 @@ Lastly, I've recorded some simple queries in Cypher that might be interesting. I
 -- Get everything
 match (n) return n
 
--- Everything, excluding imports from feature index files. Useful for finding imports that are breaking the "public feature contract convention". Coloring the nodes in Neo4j Desktop based on module labels is a great way to see this. This shows module cohesion and coupling really well.
+-- Everything, excluding imports from feature index files.
+-- Useful for finding imports that are breaking the "public feature contract convention".
+-- Coloring the nodes in Neo4j Desktop based on module labels is a great way to see this.
+-- This shows module cohesion and coupling really well.
 match (i)-[r]->(e) where not e:Feature and not i:Feature return i,r,e
 
 -- More explicitly ONLY the nodes breaking the "public contract convention"
@@ -93,7 +96,8 @@ match (i)-[r]->(e) where i.module <> e.module and not e:Feature return i,r,e
 -- All imports from one module to a different module
 match (i)-[r]->(e) where i.module <> e.module return i,r,e
 
--- Look at one module and limit connections to a single line. Might not find orphaned nodes in that module though with the way this is queried.
+-- Look at one module and limit connections to a single line.
+-- Might not find orphaned nodes in that module though with the way this is queried.
 match (i)-[r]->(e { module: 'SomeModule' }) return i,collect(r)[0],e
 ```
 
