@@ -1,5 +1,7 @@
 # surveyor
 
+<img width="460" alt="project" src="https://user-images.githubusercontent.com/6921907/163902208-6b669e79-c5a9-4406-82f6-befa05643a94.png">
+
 A dependency analysis and visualization tool for projects using ES6 imports and exports.
 
 This script is rough and ready. It was written to analyze [a specific modular architecture that I use](https://mkalvas.com/blog/code-organization) inside of a Next.js application. That said, it could be easily extended to analyze other projects with different folder/file structures. There would simply need to be some changes to the node and edge labeling process and the file/directory inclusion matchers.
